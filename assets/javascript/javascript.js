@@ -1,27 +1,32 @@
-// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyBqR-mAXBCXwC7PuI-t7QfCHUQOt8-JYDw",
     authDomain: "trainschedule-31ba2.firebaseapp.com",
     databaseURL: "https://trainschedule-31ba2.firebaseio.com",
     projectId: "trainschedule-31ba2",
-    storageBucket: "trainschedule-31ba2.appspot.com",
+    storageBucket: "",
     messagingSenderId: "225917625893",
     appId: "1:225917625893:web:bf0c1a8ddcab9f1a0b41cc"
-};
-// Initialize Firebase
+  };
+
+  // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 
 var database = firebase.database();
 
+    // Initial Values
+    var train = "";
+    var destination = "";
+    var firstTrain = "";
+    var frequency = "";
 
 
-$("#Submit").on(click, function (event) {
+$("#Submit").on("click", function (event) {
+    event.preventDefault();
 
-
-    var train = $("#train").val().trim();
-    var destination = $("#destination").val().trim();
-    var firstTrain = $("#firstTrain").val().trim();
-    var frequency = $("#frequency").val().trim();
+    train = $("#train").val().trim();
+    destination = $("#destination").val().trim();
+    firstTrain = $("#firstTrain").val().trim();
+    frequency = $("#frequency").val().trim();
 
     database.ref().push({
         trainName: train,
@@ -29,7 +34,8 @@ $("#Submit").on(click, function (event) {
         firstTrain: firstTrain,
         frequency: frequency,
         dateAdded: firebase.database.ServerValue.TIMESTAMP
-      })});
+    })
+});
 
 
 database.ref().on("child_added", function (snapshot) {
@@ -37,9 +43,11 @@ database.ref().on("child_added", function (snapshot) {
     var sv = snapshot.val();
 
 
-//place calculations here
-
-
+    //place calculations here
+    var minutes = moment().diff(firstTrain, "minutes");  
+    var  minutesaways = minutes % frequency ;
+    var nexttrain = moment().add(minuteaway,"m").format("hh:mm");
+ 
     $("tbody").append(`<tr><td>${sv.name}</td><td>${sv.email}</td><td>${sv.age}</td><td>${sv.comment}</td></tr>`); 
 
 
