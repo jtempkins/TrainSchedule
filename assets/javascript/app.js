@@ -78,7 +78,7 @@ database.ref().on("child_added", function (snapshot) {
     var nextTrain = moment().add(minutesToNext,"m").format("hh:mm");
  console.log("minutes", minutes)
 
-    $("tbody").append(`<tr><td>${train}</td><td>${destination}</td><td>${frequency}</td><td>${nextTrain}</td></tr><td>${minutesToNext}</td></tr>`); 
+    $("tbody").append(`<tr><td>${train}</td><td>${destination}</td><td>${frequency}</td><td>${nextTrain}</td><td>${minutesToNext}</td></tr>`); 
     //    Handle the errors
 
 },function (errorObject) {

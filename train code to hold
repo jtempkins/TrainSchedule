@@ -1,7 +1,0 @@
-    database.ref().push(newTrain){
-        trainName: train,
-        destination: destination,
-        firstTrain: firstTrain,
-        frequency: frequency,
-        dateAdded: firebase.database.ServerValue.TIMESTAMP
-    })
