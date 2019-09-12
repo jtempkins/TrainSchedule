@@ -6,7 +6,6 @@ max-width: 710px;
 #scheduleContainer {
     max-width: 600px;
     border: 600px; 
-    /* background-color: #3483eb; */
     border-radius: 5px;
     margin-bottom: 30px;
 
@@ -27,13 +26,12 @@ max-width: 710px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12pt;
     text-align: center;
-    /* border: 10px;
-    border-color: #0b21ee; */
 
 }
 
 .card-header {
     font-size: 18pt;
+    background-color:#ebde34;
     color: #0b21ee;
     font-family: Comic Sans MS;
 }
@@ -45,8 +43,7 @@ max-width: 710px;
 }
 
 #headContainer {
-    /* text-align: center; */
-    /* font-family: Comic Sans MS; */
+    max-width: 600px;
     background-color: #4ec6de;
     height: 125px;
     margin-bottom: 40px;
