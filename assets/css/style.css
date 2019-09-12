@@ -1,43 +1,78 @@
+.body {
+max-width: 710px;
+
+}
+
 #scheduleContainer {
-    max-width: 700px;
+    max-width: 600px;
     border: 600px; 
     /* background-color: #3483eb; */
     border-radius: 5px;
+    margin-bottom: 30px;
 
-};
+}
 
 #inputContainer {
-    max-width: 200px;
-    border: 4pt; 
-    border-color: #3483eb;
+    max-width: 500px;
+    border: 1pt; 
+    border-style: solid;
     border-radius: 5px;
-};
+    border-color: #0b21ee;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-left: 20px;
+}
 
 .table {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 12pt;
-    text-align: center
-
-};
-
-.card-header {
-    font-size: 16pt;
-    color: wheat;
-    background-color: #3483eb;
-};
-
-.jumbotron {
     text-align: center;
-    background-color: #3483eb;
-};
+    /* border: 10px;
+    border-color: #0b21ee; */
 
-h1 {
-    text-align: center;
-    font-size: 32pt;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* td {
-    text-align: center
-};
-     */
+.card-header {
+    font-size: 18pt;
+    color: #0b21ee;
+    font-family: Comic Sans MS;
+}
+
+.card-body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12pt;
+    background-color: #dbe3e7;
+}
+
+#headContainer {
+    /* text-align: center; */
+    /* font-family: Comic Sans MS; */
+    background-color: #4ec6de;
+    height: 125px;
+    margin-bottom: 40px;
+    padding-top: 35px;
+}
+
+h1 {
+    font-family: Comic Sans MS;
+    font-size: 48pt;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 14px;
+    color: #0b21ee;
+  
+  }
+
+  h2 {
+    font-family: Comic Sans MS;
+    font-size: 18pt;
+    font-style: italic;
+    text-align: center;
+    line-height: 14px;
+    color: #0b21ee;
+    padding-top: 35px;
+  
+  }
+td {
+    text-align: center;
+}
